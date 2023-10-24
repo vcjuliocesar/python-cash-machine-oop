@@ -1,16 +1,13 @@
 """This module has definition of the Credit entity
 """
 
-from src.domain.entities.user import User
 from src.domain.value_objects import INITIALIZE_CREDIT_BALANCE_AMOUNT,EMPTY_BALANCE,FEE,LIMIT_CREDIT
 from src.domain.entities.interfaces.credit_account_interface import CreditAccountInterface
 
 class Credit(CreditAccountInterface):
     
-    def __init__(self,user:User) -> None:
+    def __init__(self) -> None:
         
-         self.user = user
-
          self.init_balance = INITIALIZE_CREDIT_BALANCE_AMOUNT
     
     def balance(self):

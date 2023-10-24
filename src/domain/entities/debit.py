@@ -1,16 +1,13 @@
 """This module has definition of the Debit entity
 """
 
-from src.domain.entities.user import User
 from src.domain.value_objects import INITIALIZE_BALANCE_AMOUNT, INITIALIZE_CREDIT_BALANCE_AMOUNT, MAX_AMOUNT_AVAILABLE, MIN_AMOUNT_AVAILABLE
 from src.domain.entities.interfaces.debit_account_interface import DebitAccountInterface
 
 
 class Debit(DebitAccountInterface):
 
-    def __init__(self, user: User) -> None:
-
-        self.user = user
+    def __init__(self) -> None:
 
         self.init_balance = INITIALIZE_BALANCE_AMOUNT - INITIALIZE_CREDIT_BALANCE_AMOUNT
 
