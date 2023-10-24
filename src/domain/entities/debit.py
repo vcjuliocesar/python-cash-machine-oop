@@ -1,3 +1,6 @@
+"""This module has definition of the Debit entity
+"""
+
 from src.domain.entities.user import User
 from src.domain.value_objects import INITIALIZE_BALANCE_AMOUNT, INITIALIZE_CREDIT_BALANCE_AMOUNT, MAX_AMOUNT_AVAILABLE, MIN_AMOUNT_AVAILABLE
 from src.domain.entities.interfaces.debit_account_interface import DebitAccountInterface
@@ -29,7 +32,7 @@ class Debit(DebitAccountInterface):
 
             raise Exception("La cuenta esta vacia")
 
-        self.update_balance(self.init_balance + amount)
+        Debit.update_balance(self.init_balance + amount)
 
     def saving(amount):
 
@@ -41,7 +44,8 @@ class Debit(DebitAccountInterface):
         if amount < MIN_AMOUNT_AVAILABLE:
 
             raise Exception(f"No se permiten transacciones menores a {MIN_AMOUNT_AVAILABLE}")
-
+    
+    @staticmethod
     def update_balance(self, new_balance):
 
         self.init_balance = new_balance
