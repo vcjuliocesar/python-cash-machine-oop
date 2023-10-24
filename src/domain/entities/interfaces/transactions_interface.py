@@ -13,6 +13,7 @@ class TransactionsInterface(ABC):
     def with_draw(amount):
         pass
     
+    @staticmethod
     @abstractmethod
     def update_balance(balance):
         pass
