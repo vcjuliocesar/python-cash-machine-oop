@@ -12,7 +12,7 @@ class TestDebitAccount(unittest.TestCase):
         
         user.register()
         
-        account = Debit(user)
+        account = Debit()
         
         with self.assertRaises(Exception):
             
@@ -24,7 +24,7 @@ class TestDebitAccount(unittest.TestCase):
         
         user.register()
         
-        account = Debit(user)
+        account = Debit()
         
         self.assertEqual(10500,account.balance())
         

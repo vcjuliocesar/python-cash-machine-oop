@@ -12,7 +12,7 @@ class TestCreditAccount(unittest.TestCase):
         
         user.register()
         
-        account = Credit(user)
+        account = Credit()
         
         with self.assertRaises(Exception):
             
@@ -24,7 +24,7 @@ class TestCreditAccount(unittest.TestCase):
         
         user.register()
         
-        account = Credit(user)
+        account = Credit()
         
         self.assertEqual(500,account.balance())
         
